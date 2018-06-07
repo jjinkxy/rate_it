@@ -1,5 +1,4 @@
-
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rate_it/version'
 
@@ -9,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Julia Jochum']
   spec.email         = ['jj@denkungsart-gmbh.de']
 
-  spec.summary       = %q(Add rating functionality to your Rails App)
-  spec.description   = %q(A rating gem, where multiple models can rate multiple models.)
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'Add rating functionality to your Rails App'
+  spec.description   = 'A rating gem, where multiple models can rate multiple models.'
+  spec.homepage      = 'https://github.com/jjinkxy/rate_it'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

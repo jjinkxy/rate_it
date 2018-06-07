@@ -1,2 +1,2 @@
-Metric/LineLength:
-  Max: 90
+Metrics/LineLength:
+  Max: 150

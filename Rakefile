@@ -8,6 +8,4 @@ Rake::TestTask.new(:test) do |t|
 end
 
 task default: :test
-if !ENV['APPRAISAL_INITIALIZED'] && !ENV['TRAVIS']
-  task default: :appraisal
-end
+task default: :appraisal if !ENV['APPRAISAL_INITIALIZED'] && !ENV['TRAVIS']
