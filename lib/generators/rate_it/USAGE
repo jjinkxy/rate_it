@@ -2,7 +2,7 @@ Description:
     Explain the generator
 
 Example:
-    rails generate rate_it
+    rails generate rate_it:install
 
     This will create:
         what/will/it/create
