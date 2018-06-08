@@ -5,7 +5,7 @@ class RateItCreateRates < ActiveRecord::Migration[4.2]
       t.belongs_to :rateable, polymorphic: true
       t.decimal :score, precision: 10, scale: 5, null: false
       t.string :criterion, default: nil
-      t.integer :weight, null: false
+      t.integer :weight
 
       t.timestamps null: false
     end
