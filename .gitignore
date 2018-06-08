@@ -5,6 +5,7 @@
 /doc/
 /pkg/
 /spec/reports/
+/test/tmp/
 /tmp/
 *.gem
 *.gemfile.lock
