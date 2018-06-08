@@ -11,4 +11,4 @@ gemfile:
   - gemfiles/rails_5_1.gemfile
   - gemfiles/rails_5_2.gemfile
 before_install: gem install bundler -v 1.16.2
-script: "bundle exec rake test"
+script: bundle exec rake test

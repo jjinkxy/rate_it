@@ -1,4 +1,4 @@
-# RateIt
+# rate_it
 [![Build Status](https://travis-ci.org/jjinkxy/rate_it.svg?branch=master)](https://travis-ci.org/jjinkxy/rate_it) [![Coverage Status](https://coveralls.io/repos/github/jjinkxy/rate_it/badge.svg?branch=master)](https://coveralls.io/github/jjinkxy/rate_it?branch=master)
 
 ## Installation
