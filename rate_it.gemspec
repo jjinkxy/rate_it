@@ -33,7 +33,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'appraisal'
   spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'factory_bot', '~> 4.10'
   spec.add_development_dependency 'guard'
   spec.add_development_dependency 'guard-minitest'
