@@ -1,5 +1,5 @@
 # rate_it
-[![Build Status](https://travis-ci.org/jjinkxy/rate_it.svg?branch=master)](https://travis-ci.org/jjinkxy/rate_it) [![Coverage Status](https://coveralls.io/repos/github/jjinkxy/rate_it/badge.svg?branch=master)](https://coveralls.io/github/jjinkxy/rate_it?branch=master)
+[![Build Status](https://travis-ci.org/jjinkxy/rate_it.svg?branch=master)](https://travis-ci.org/jjinkxy/rate_it) [![Maintainability](https://api.codeclimate.com/v1/badges/1535cc1635747610a636/maintainability)](https://codeclimate.com/github/jjinkxy/rate_it/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/1535cc1635747610a636/test_coverage)](https://codeclimate.com/github/jjinkxy/rate_it/test_coverage)
 
 ## Installation
 
