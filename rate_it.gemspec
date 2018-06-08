@@ -34,9 +34,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'appraisal'
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'coveralls'
+  spec.add_development_dependency 'factory_bot', '~> 4.10'
   spec.add_development_dependency 'guard'
   spec.add_development_dependency 'guard-minitest'
   spec.add_development_dependency 'minitest', '~> 5.10.3'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rubocop', '~> 0.57.1'
+  spec.add_development_dependency 'simplecov'
 end
