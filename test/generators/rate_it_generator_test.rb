@@ -1,8 +1,8 @@
 require 'test_helper'
-require 'generators/rate_it/rate_it_generator'
+require 'generators/rate_it/install_generator'
 
 class RateItGeneratorTest < Rails::Generators::TestCase
-  tests RateIt::RateItGenerator
+  tests RateIt::InstallGenerator
   destination File.expand_path('../tmp', File.dirname(__FILE__))
   setup :prepare_destination
 
