@@ -17,6 +17,14 @@ Or install it yourself as:
 
     $ gem install rate_it
 
+Generate the rates table migration
+
+    $ rails g rate_it:install
+
+And don't forget to migrate after
+
+    $ rake db:migrate
+
 ## Usage
 
 TODO: Write usage instructions here
