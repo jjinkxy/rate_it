@@ -2,10 +2,12 @@ module RateIt
   module Rateable
     extend ActiveSupport::Concern
 
-    def self.included(base)
-      base.extend(ClassMethods)
+    included do
+      def rate(rater, score)
+        rates.create(rater: rater, score: score)
+      end
     end
-    module ClassMethods
+    class_methods do
       def rate_it_rateable
         has_many :rates, as: :rateable, class_name: 'RateIt::Rate', dependent: :destroy
       end

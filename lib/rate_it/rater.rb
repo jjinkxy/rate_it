@@ -5,7 +5,7 @@ module RateIt
     def self.included(base)
       base.extend(ClassMethods)
     end
-    module ClassMethods
+    class_methods do
       def rate_it_rater
         has_many :rates, as: :rater, class_name: 'RateIt::Rate', dependent: :destroy
       end
