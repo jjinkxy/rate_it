@@ -19,6 +19,11 @@ describe RateIt::Rateable do
     subject.max_score.must_equal 5
   end
 
+  it 'cant rate higher than max score' do
+    rater = create(:rater)
+    subject.rate(rater, 7).must_equal false
+  end
+
   describe 'with options' do
     subject { create(:rateable_with_options) }
 
