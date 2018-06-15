@@ -4,7 +4,7 @@ AllCops:
     - 'config/**/*'
     - 'script/**/*'
     - !ruby/regexp /old_and_unused\.rb$/
-    - 'test/support/schema.rb'
+    - 'test/internal/db/*'
 Metrics/LineLength:
   Max: 150
 Style/Documentation:
