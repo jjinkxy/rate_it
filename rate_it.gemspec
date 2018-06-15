@@ -22,7 +22,12 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
+  spec.add_dependency 'rails', '>= 4.2.0'
+
+  spec.add_development_dependency 'activerecord'
   spec.add_development_dependency 'appraisal'
+  spec.add_development_dependency 'capybara'
+  spec.add_development_dependency 'combustion', '~> 0.9.1'
   spec.add_development_dependency 'factory_bot', '~> 4.10'
   spec.add_development_dependency 'minitest', '~> 5.10.3'
   spec.add_development_dependency 'rubocop', '~> 0.57.1'

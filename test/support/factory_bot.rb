@@ -1,3 +1,4 @@
+require 'factory_bot'
 class Minitest::Spec
   include FactoryBot::Syntax::Methods
   FactoryBot.find_definitions
