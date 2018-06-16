@@ -6,6 +6,10 @@ module RateIt
       def rated?(rateable)
         rates.where(rateable: rateable).any?
       end
+
+      def last_score(rateable)
+        rated?(rateable) ? rates.where(rateable: rateable).last.score : 0
+      end
     end
 
     class_methods do
