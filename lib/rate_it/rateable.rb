@@ -7,6 +7,11 @@ module RateIt
         return false if score > max_score
         rates.create(rater: rater, score: score)
       end
+
+      def overall_average
+        return 0 unless rates.any?
+        rates.average(:score)
+      end
     end
 
     class_methods do
