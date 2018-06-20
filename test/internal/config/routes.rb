@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  mount RateIt::Engine => '/rate_it'
   resources :rateable do
     member do
       put :rate_it
