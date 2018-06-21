@@ -1,7 +1,9 @@
-lib = File.expand_path('lib', __dir__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$LOAD_PATH.push File.expand_path('lib', __dir__)
+
+# Maintain your gem's version:
 require 'rate_it/version'
 
+# Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name          = 'rate_it'
   spec.version       = RateIt::VERSION
@@ -18,9 +20,13 @@ Gem::Specification.new do |spec|
   spec.files         = Dir.chdir(File.expand_path(__dir__, __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
+  # s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'coffee-script'
+  spec.add_dependency 'rails', '>= 4.2.0'
 
   spec.add_development_dependency 'actionpack'
   spec.add_development_dependency 'activerecord'

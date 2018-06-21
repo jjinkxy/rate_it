@@ -5,6 +5,10 @@ require 'combustion'
 Combustion.path = 'test/internal'
 Combustion.initialize! :active_record, :action_controller, :action_view
 
+# Configure Rails Environment
+# ENV["RAILS_ENV"] = "test"
+
+# require "rails/test_help"
 require 'rate_it'
 require 'minitest/autorun'
 require 'minitest/spec'
@@ -15,7 +19,9 @@ require 'capybara/minitest'
 require 'capybara/minitest/spec'
 
 $LOAD_PATH.unshift File.expand_path('../lib', __dir__)
-
+# Filter out Minitest backtrace while allowing backtrace from other libraries
+# to be shown.
+# Minitest.backtrace_filter = Minitest::BacktraceFilter.new
 # Taken from Capybara Gem README
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests

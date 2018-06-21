@@ -1,25 +1,5 @@
 module RateIt
   module RateHelper
-    # def rate_it_for(rateable, rater)
-    #   score = rater.last_score(rateable)
-    #   link_to polymorphic_url(
-    #     [:rate_it, rateable],
-    #     rater: rater.id,
-    #     rater_type: rater.model_name.human,
-    #     score: score
-    #   ), method: :put, remote: true do
-    #     star_content_tag(rateable, score)
-    #   end
-    # end
-    #
-    # def star_content_tag(rateable, score)
-    #   content_tag :div, id: dom_id(rateable, :rating) do
-    #     concat safe_join((1..rateable.max_score).each_with_object([]) do |i, a|
-    #       icon = i <= score ? 'fa-star' : 'fa-star-o'
-    #       a << content_tag(:i, '', value: i, class: "fa #{icon} rate_it_star")
-    #     end)
-    #   end
-    # end
     def rate_it_for(rateable, rater)
       score = rater.last_score(rateable)
       rater_star_content(rateable, rater, score)

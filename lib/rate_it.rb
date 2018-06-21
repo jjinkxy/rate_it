@@ -1,3 +1,5 @@
+require 'rate_it/engine'
+
 module RateIt
   require 'active_support'
   require 'rate_it/version'

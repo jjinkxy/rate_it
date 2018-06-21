@@ -1,4 +1,5 @@
 /.bundle/
+log/*.log
 /.yardoc
 /_yardoc/
 /coverage/

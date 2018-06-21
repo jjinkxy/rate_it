@@ -19,6 +19,16 @@ describe RateIt::Rater do
     end
   end
 
+  describe 'last_rate' do
+    it 'returns last rate of given rateable' do
+      subject.rates.create(rateable: rateable, score: 3)
+      subject.last_rate(rateable).must_equal subject.rates.where(rateable: rateable).last
+    end
+    it 'return nil if not rated yet' do
+      subject.last_rate(rateable).must_be_nil
+    end
+  end
+
   describe 'last score' do
     it 'returns 0 if not rated' do
       subject.last_score(rateable).must_equal 0
