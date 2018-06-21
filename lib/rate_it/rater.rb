@@ -7,8 +7,13 @@ module RateIt
         rates.where(rateable: rateable).any?
       end
 
+      def last_rate(rateable)
+        return if rates.empty?
+        rates.where(rateable: rateable).last
+      end
+
       def last_score(rateable)
-        rated?(rateable) ? rates.where(rateable: rateable).last.score : 0
+        rated?(rateable) ? last_rate(rateable).score : 0
       end
     end
 

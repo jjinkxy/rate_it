@@ -25,8 +25,9 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  # s.add_dependency "rails", "~> 5.2.0"
   spec.add_dependency 'coffee-script'
+  spec.add_dependency 'rails', '>= 4.2.0'
+
   spec.add_development_dependency 'actionpack'
   spec.add_development_dependency 'activerecord'
   spec.add_development_dependency 'appraisal'

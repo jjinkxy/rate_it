@@ -4,8 +4,12 @@ module RateIt
 
     included do
       def rate(rater, score)
-        return false if score > max_score
-        rates.create(rater: rater, score: score)
+        return if score > max_score
+        if rater.rated?(self)
+          rater.last_rate(self).update(score: score)
+        else
+          rates.create(rater: rater, score: score)
+        end
       end
 
       def overall_average

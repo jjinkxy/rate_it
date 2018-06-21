@@ -21,7 +21,7 @@ describe RateIt::Rateable do
     end
 
     it 'cant rate higher than max score' do
-      subject.rate(rater, 7).must_equal false
+      subject.rate(rater, 7).must_be_nil
     end
   end
 
