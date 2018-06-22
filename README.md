@@ -101,11 +101,11 @@ They would looks something like this:
 
 Rate It uses CoffeeScript to have create an effect over the stars during hover.
 Add Rate It to your application.js for that to work:
-```
+```js
 //= require rate_it
 ```
 Rate It uses the gem [font-awesome-rails](https://github.com/bokmann/font-awesome-rails) to display stars. Font-Awesome is added, when you add Rate It to your application.scss:
-```
+```sass
 @import 'rate_it';
 ```
 When a rate is submitted, it will call the action `:rate_it`.
