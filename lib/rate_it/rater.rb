@@ -13,7 +13,7 @@ module RateIt
       end
 
       def last_score(rateable)
-        rated?(rateable) ? last_rate(rateable).score : 0
+        rated?(rateable) ? last_rate(rateable).score.to_i : 0
       end
     end
 

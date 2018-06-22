@@ -38,5 +38,10 @@ describe RateIt::Rater do
       rate = subject.rates.create(rateable: rateable, score: 3)
       subject.last_score(rateable).must_equal rate.score
     end
+
+    it 'returns a integer' do
+      subject.rates.create(rateable: rateable, score: 3)
+      subject.last_score(rateable).must_be_kind_of Integer
+    end
   end
 end
