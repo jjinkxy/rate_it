@@ -135,8 +135,23 @@ $('#<%= dom_id(@movie, :rating) %>').replaceWith('<%= escape_javascript(rate_it_
 # To update rate_it_average
 $('#<%= dom_id(@movie, :avg_rating) %>').replaceWith('<%= escape_javascript(rate_it_average(@movie)) %>')
 ```
+### Devise
+If the rater is a devise model called for example User, `@user` can be replaced with `current_user`
 
-## Tests
+## Development
+This gem uses the gem Appraisal.
+### Bundle
+To bundle gem first bundle normally then for all the Rails version.
+```
+bundle
+bundle exec appraisal bundle
+```
+
+### Tests
+To have all tests run for all rails version
+```
+bundle exec appraisal rake test
+```
 
 ## Contributing
 
