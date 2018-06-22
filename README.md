@@ -28,6 +28,7 @@ And don't forget to migrate after
     $ rake db:migrate
 
 ## Usage
+For the example below a rateable is Movie and a rater is User
 
 ### Rateable Models
 You must add `rate_it_rateable` to the model you want to be able to rate
@@ -55,7 +56,7 @@ end
 You can make multiple models raters.
 
 ### Available methods
-A rateable can be rated on and an average rate for rateable by all raters can be calculated
+A movie can be rated on and an average rate for a movie by all users can be returned
 ```ruby
 # rate(rater, score)
 @movie.rate(@user1, 3)
@@ -63,7 +64,7 @@ A rateable can be rated on and an average rate for rateable by all raters can be
 
 @movie.overall_average # => 8
 ```
-A rater has a few methods available to see if they have rated for a rateable, get the score and rate instance
+A user has a few methods available to see if they have rated for a movie, get the score and rate instance
 ```ruby
 # rated?(rateable)
 @user1.rated?(@movie) # => false
@@ -77,7 +78,7 @@ A rater has a few methods available to see if they have rated for a rateable, ge
 # last_score(rateable)
 @user1.last_score(@movie) => 3
 ```
-A rater can rate a rateable with a given score. If rater rates again, their rate will get updated.
+A user can rate a movie with a given score. If user rates again, their rate will get updated.
 ```ruby
 @movie.rate(@user1, 2)
 @rater.last_score(@movie) # => 2
@@ -89,11 +90,15 @@ There are two view helpers available.
 ```erb
 # Display @user last score, no filled in stars if hasnt rated @movie yet.
 # The index of the star that is clicked, rates @movie by that index for @user
-<%= rate_it_for(@movie, @user) %>
+Average: <%= rate_it_for(@movie, @user) %>
 
 # Display the overall average from all raters of @movie in stars
-<%= rate_it_average(@movie) %>
+Rate It! <%= rate_it_average(@movie) %>
 ```
+They would looks something like this:
+
+![screen shot 2018-06-22 at 14 30 43](https://user-images.githubusercontent.com/29758157/41776792-5905db96-7629-11e8-8f85-9c5c5edd700e.png)
+
 Rate It uses CoffeeScript to have create an effect over the stars during hover.
 Add Rate It to your application.js for that to work:
 ```
