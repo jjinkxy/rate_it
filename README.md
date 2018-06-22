@@ -143,14 +143,14 @@ This gem uses the gem [Appraisal](https://github.com/thoughtbot/appraisal).
 ### Bundle
 To bundle gem first bundle normally then for all the Rails version.
 ```
-bundle
-bundle exec appraisal bundle
+$ bundle
+$ bundle exec appraisal bundle
 ```
 
 ### Tests
 To have all tests run for all rails version
 ```
-bundle exec appraisal rake test
+$ bundle exec appraisal rake test
 ```
 You can find more options in the [Appraisal](https://github.com/thoughtbot/appraisal) README.
 
