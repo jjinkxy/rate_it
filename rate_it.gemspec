@@ -26,7 +26,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'coffee-script'
-  spec.add_dependency 'rails', '>= 4.2.0'
+  spec.add_dependency 'rails', '>= 4.2'
+  spec.add_dependency 'sprockets', '~> 3.7.2'
 
   spec.add_development_dependency 'actionpack'
   spec.add_development_dependency 'activerecord'
