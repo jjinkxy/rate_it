@@ -104,7 +104,7 @@ Add Rate It to your application.js for that to work:
 ```
 //= require rate_it
 ```
-Rate It uses the gem 'font-awesome-rails' to display stars. Font-Awesome is added, when you add Rate It to your application.scss:
+Rate It uses the gem [font-awesome-rails](https://github.com/bokmann/font-awesome-rails) to display stars. Font-Awesome is added, when you add Rate It to your application.scss:
 ```
 @import 'rate_it';
 ```
@@ -139,7 +139,7 @@ $('#<%= dom_id(@movie, :avg_rating) %>').replaceWith('<%= escape_javascript(rate
 If the rater is a devise model called for example User, `@user` can be replaced with `current_user`
 
 ## Development
-This gem uses the gem Appraisal.
+This gem uses the gem [Appraisal](https://github.com/thoughtbot/appraisal).
 ### Bundle
 To bundle gem first bundle normally then for all the Rails version.
 ```
@@ -152,6 +152,7 @@ To have all tests run for all rails version
 ```
 bundle exec appraisal rake test
 ```
+You can find more options in the [Appraisal](https://github.com/thoughtbot/appraisal) README.
 
 ## Contributing
 
