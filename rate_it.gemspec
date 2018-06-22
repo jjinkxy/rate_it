@@ -26,7 +26,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'coffee-script'
+  spec.add_dependency 'font-awesome-rails'
   spec.add_dependency 'rails', '>= 4.2'
+  # Due to the vulnerability: https://groups.google.com/forum/#!topic/ruby-security-ann/2S9Pwz2i16k
   spec.add_dependency 'sprockets', '~> 3.7.2'
 
   spec.add_development_dependency 'actionpack'
