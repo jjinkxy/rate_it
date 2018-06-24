@@ -112,18 +112,18 @@ When a rate is submitted, it will call the action `:rate_it`.
 This will need to be defined as a member route of the rateable
 ```ruby
 resources :movies do
-    put :rate_it, on: :member
+  put :rate_it, on: :member
 end
 ```
 and in the rated rateable's controller, for example
 ```ruby
 def rate_it
-    @movie = Movie.find(params[:id])
-    @user = params[:rater_type].constantize.find(params[:rater_id])
-    @movie.rate(@user, params[:score].to_i)
-    respond_to do |format|
-      format.js
-    end
+  @movie = Movie.find(params[:id])
+  @user = params[:rater_type].constantize.find(params[:rater_id])
+  @movie.rate(@user, params[:score].to_i)
+  respond_to do |format|
+    format.js
+  end
 end
 ```
 
