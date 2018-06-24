@@ -95,7 +95,7 @@ Average: <%= rate_it_for(@movie, @user) %>
 # Display the overall average from all raters of @movie in stars
 Rate It! <%= rate_it_average(@movie) %>
 ```
-They would looks something like this:
+They would look something like this:
 
 ![screen shot 2018-06-22 at 14 30 43](https://user-images.githubusercontent.com/29758157/41776792-5905db96-7629-11e8-8f85-9c5c5edd700e.png)
 
