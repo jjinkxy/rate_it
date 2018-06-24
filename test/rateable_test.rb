@@ -15,6 +15,15 @@ describe RateIt::Rateable do
     subject.rates.wont_be_empty
   end
 
+  it 'updates if a rater has already rated this rateable' do
+    subject.rate(rater, 5)
+    rate1 = rater.last_rate(subject)
+    subject.rate(rater, 4)
+    rate2 = rater.last_rate(subject)
+    rater.last_score(subject).must_equal 4
+    rate2.id.must_equal rate1.id
+  end
+
   describe 'max score' do
     it 'has a max score default of 5' do
       subject.max_score.must_equal 5
